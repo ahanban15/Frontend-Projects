@@ -1,0 +1,187 @@
+
+    /* CSS Reset */
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: url('Images/bg.jpg');
+        width: 100%;
+        height: 1000px;
+        color: white;
+
+        /* CSS statement to specify desired font family */
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+
+    /* border: 2px solid yellow; 
+    keep borders initially to locate where each element is heading to after each changes*/
+
+    .left {
+        display: inline-block;
+        position: absolute;
+        left: 30px;
+        top: -22px;
+        opacity: 100%;
+
+        /* border: 2px solid red; */
+    }
+
+    /* to center an element with margin auto: 3 conditions reequired->
+    1. display:block 
+    2. width: w%
+    3. margin: mpx auto*/
+
+    /* display: inline-block 
+    allows the element to be inline and also allows us to set its height and width*/
+
+    .mid {
+        display: block;
+        width: 50%;
+        margin: 18px 10px 12px 345px;
+
+        /* border: 2px solid yellow; */
+    }
+
+    .right {
+        display: inline-block;
+        position: absolute;
+        right: 25px;
+        top: 55px;
+
+        /* border: 2px solid white; */
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 25px;
+    }
+
+    .navbar li a {
+        display: inline-block;
+        color: white;
+
+        /* to remove linked highlighting */
+        text-decoration: none;
+
+        padding: 20px 20px;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: gray;
+    }
+
+    /* CSS invert function: to invert the color from black to white and vice versa.
+
+    The invert() function requires an argument to be passed to it. This argument determines the proportion of the conversion that's applied to the image. The argument can be either a percentage value or a number.
+    
+    The CSS invert() function is used with the filter property to invert the samples in an image.*/
+
+    .left img {
+        width: 150px;
+        filter: invert(100%);
+    }
+
+    .left div {
+        text-align: center;
+        line-height: 16px;
+        font-size: 23px;
+    }
+
+    .left:hover {
+        opacity: 50%;
+        transition: opacity 1s;
+    }
+
+    /* Difference between Margin and Padding:
+    In CSS, a margin is the space around an element's border, while padding is the space between an element's border and the element's content. Put another way, the margin property controls the space outside an element, and the padding property controls the space inside an element */
+
+    /* cursor:pointer
+    hover upon the element changes cursor from arrow to pointer  */
+
+    .btn {
+        margin: -1px 10px;
+        background-color: black;
+        color: white;
+        padding: 0px 20px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+
+    .btn:hover {
+        background-color: grey;
+    }
+
+    .container {
+        /* border: 2px solid white; */
+
+        margin: -43px 5px;
+        padding: 60px 50px;
+        width: 33%;
+        border-radius: 10px;
+        float: right;
+    }
+
+    .form-group input {
+        display: block;
+        background-color: white;
+        font-size: 20px;
+        text-align: center;
+        width: 450px;
+        padding: 5px;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin: 10px 30px;
+        color: black;
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+
+    .container button{        
+        display: inline-block;
+        margin: 16px 41px;
+        background-color: hotpink;
+        width: 90%;
+        border: 15px ridge white;
+        font-size: 35px;
+        animation: blinkingBackground 2s infinite;
+    }
+
+    @keyframes blinkingBackground{
+		0%		{ background-color: #10c018;}
+		25%		{ background-color: #1056c0;}
+		50%		{ background-color: #ef0a1a;}
+		75%		{ background-color: #254878;}
+		100%	        { background-color: #04a1d5;
+        }
+    }
+
+    .container h1 {
+        text-align: center;
+        font-size: 50px;
+        /* animation: fadeIn 5s; */
+        animation: animate 3s linear infinite;
+    }
+/*
+    @keyframes fadeIn {
+         0% { opacity: 0; }
+        50% { opacity: 1; }
+    }
+*/
+    @keyframes animate{
+   0%{
+     opacity: 0;
+   }
+   50%{
+     opacity: 0.7;
+   }
+   100%{
+     opacity: 0;
+   }
+ }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banergy Expense Tracker</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@900&family=Prompt&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <u>
+        <h1>Personal Finance Tracker</h1>
+        <h3>Banergy Solutions</h2>
+    </u>
+    <br>
+    <div class="wrapper">
+        <div class="container">
+            <div class="output-container flex-space">
+                <div>
+                    <p>Net Income</p>
+                    <span id="amount">0</span>
+                </div>
+                <div>
+                    <p>Total Expenditure</p>
+                    <span id="expenditure-value">0</span>
+                </div>
+                <div>
+                    <p>Balance</p>
+                    <span id="balance-amount">0</span>
+                </div>
+            </div>
+            <div class="sub-container">
+                <div class="total-amount-container">
+                    <h3>Income</h3>
+                    <p class="hide error" id="budget-error">Value canNOT be NULL or negative</p>
+                    <input type="number" name="income" id="total-amount" placeholder="Enter your total income: " />
+                    <button class="submit" id="total-amount-button" type="submit">Set Budget</button>
+                </div>
+                <div class="user-amount-container">
+                    <h3>Expenses</h3>
+                    <p class="hide error" id="prodct-title-error">
+                        Values canNOT be NULL
+                    </p>
+                    <input type="text" class="product-title" id="product-title" name="expenses" id="product-title"
+                        placeholder="Enter title of product: ">
+                    <input type="number" class="user-amount" id="user-amount" name="cost"
+                        placeholder="Enter the cost of the product: ">
+                    <button class="submit" id="check-amount">Check Amount</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="list">
+            <h3>List of Expenses</h3>
+            <div class="list-container" id="list">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
